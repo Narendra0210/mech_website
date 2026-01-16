@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <div class="contact-info">
+                            <a href="tel:+1234567890" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+1 (234) 567-890</span>
+                            </a>
+                            <a href="mailto:info@websolutions.com" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>info@websolutions.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <a href="/" class="logo-name">WebSolutions</a>
+                            <span class="logo-subtitle">Digital Excellence</span>
+                        </div>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="/" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="product.html" class="nav-link">Products</a></li>
+                        <li><a href="service.html" class="nav-link">Services</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="contact.html" class="btn-cta">Get Quote</a>
+                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<!-- <section style="
+  width:100%;
+  min-height:60vh;
+  padding:90px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg, #0b1220 0%, #102a43 50%, #0b1f3a 100%);
+  box-sizing:border-box;
+">
+
+  <div style="
+    max-width:900px;
+    margin:100px 0px auto;
+  ">
+
+    <h1 style="
+      font-size:42px;
+      font-weight:800;
+      color:#ffffff;
+      margin-bottom:22px;
+      line-height:1.2;
+    ">
+      Our <span style="color:rgba(255,255,255,0.35);">Services</span>
+    </h1> -->
+
+
+    <section style="
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0b1220 0%, #102a43 50%, #0b1f3a 100%);
+    padding: 60px 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+">
+    <div style="
+        max-width: 900px;
+        margin: 0 auto;
+    ">
+        <h1 style="
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        ">
+            Our <span style="color: #3fa9f5;"> Services</span>
+        </h1>
+
+    <p style="
+      font-size:18px;
+      color:rgba(255,255,255,0.92);
+      line-height:1.7;
+      margin:0 auto 36px;
+      max-width:720px;
+    ">
+      Beyond just supplying products, we provide comprehensive services that
+      ensure your success and operational efficiency.
+    </p>
+
+    <div style="
+      display:inline-block;
+      padding:14px 36px;
+      border-radius:999px;
+      background:linear-gradient(90deg, #84cc16, #6ee7b7);
+      font-size:18px;
+      font-weight:700;
+      color:#0f172a;
+      box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    ">
+      “Delivery, Simplified. Trusted.”
+    </div>
+
+  </div>
+
+</section>
+
+
+<section style="
+  width:100%;
+  padding:50px 50px;
+  background:#ffffff;
+  box-sizing:border-box;
+">
+
+  <div style="max-width:1300px;margin:0 auto;">
+
+    <!-- SECTION HEADER -->
+    <div style="text-align:center;margin-bottom:80px;">
+      <h2 style="
+        font-size:42px;
+        font-weight:800;
+        color:#0f172a;
+        margin-bottom:10px;
+      ">
+        Comprehensive <span style="color:#64748b;">Service Solutions</span>
+      </h2>
+
+      <p style="
+        font-size:15px;
+        color:#475569;
+        max-width:700px;
+        margin:0 auto;
+        line-height:1.7;
+      ">
+        From initial sourcing to final delivery, our integrated services cover
+        every aspect of your industrial supply chain needs.
+      </p>
+    </div>
+
+    <!-- ================= SERVICE 1 ================= -->
+    <div style="
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:40px;
+      align-items:center;
+      margin-bottom:50px;
+    ">
+
+      <!-- TEXT -->
+      <div>
+        <div style="
+          width:44px;height:44px;
+          background:#84cc16;
+          border-radius:10px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin-bottom:16px;
+          color:#fff;
+          font-size:20px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg></div>
+
+        <h3 style="font-size:29px;font-weight:800;color:#0f172a;margin-bottom:8px;">
+          Sourcing & Procurement
+        </h3>
+
+        <p style="font-size:17px;color:#475569;margin-bottom:20px;">
+          Strategic sourcing of industrial products from verified manufacturers worldwide
+        </p>
+
+        <div style="
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          gap:8px 22px;
+          font-size:15px;
+          color:#0f172a;
+          margin-bottom:22px;
+        ">
+          <div>🟢 Supplier Verification & Qualification</div>
+          <div>🟢 Quality Control & Inspection</div>
+          <div>🟢 Price Negotiation & Optimization</div>
+          <div>🟢 Contract Management</div>
+          <div>🟢 Risk Assessment & Mitigation</div>
+          <div>🟢 Market Research & Analysis</div>
+        </div>
+
+        <a href="#contact" style="
+          display:inline-block;
+          padding:9px 18px;
+          background:#0f4ea8;
+          color:#fff;
+          border-radius:6px;
+          font-size:13px;
+          font-weight:600;
+          text-decoration:none;
+        ">Contact Us</a>
+      </div>
+
+      <!-- CARD -->
+      <div style="
+        background:#84cc16;
+        border-radius:18px;
+        padding:55px 40px;
+        text-align:center;
+        color:#ffffff;
+      ">
+        <div style="
+          width:70px;height:70px;
+          background:rgba(255,255,255,0.25);
+          border-radius:50%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:0 auto 18px;
+          font-size:30px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg></div>
+
+        <h4 style="font-size:29px;font-weight:700;margin-bottom:4px;">
+          Sourcing & Procurement
+        </h4>
+
+        <p style="font-size:17px;opacity:0.95;">
+          Professional Service Excellence
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= SERVICE 2 ================= -->
+    <div style="
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:60px;
+      align-items:center;
+      margin-bottom:100px;
+    ">
+
+      <!-- CARD -->
+      <div style="
+        background:#64748b;
+        border-radius:18px;
+        padding:55px 40px;
+        text-align:center;
+        color:#ffffff;
+      ">
+        <div style="
+          width:70px;height:70px;
+          background:rgba(255,255,255,0.25);
+          border-radius:50%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:0 auto 18px;
+          font-size:30px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+  <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+</svg></div>
+
+        <h4 style="font-size:29px;font-weight:700;margin-bottom:4px;">
+          Export & Shipping Documentation
+        </h4>
+
+        <p style="font-size:17px;opacity:0.95;">
+          Professional Service Excellence
+        </p>
+      </div>
+
+      <!-- TEXT -->
+      <div>
+        <div style="
+          width:44px;height:44px;
+          background:#64748b;
+          border-radius:10px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin-bottom:16px;
+          color:#fff;
+          font-size:20px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+  <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+</svg></div>
+
+        <h3 style="font-size:29px;font-weight:800;color:#0f172a;margin-bottom:8px;">
+          Export & Shipping Documentation
+        </h3>
+
+        <p style="font-size:17px;color:#475569;margin-bottom:20px;">
+          Complete documentation and compliance for international trade
+        </p>
+
+        <div style="
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          gap:8px 22px;
+          font-size:15px;
+          margin-bottom:22px;
+        ">
+          <div>🟢 Export License Applications</div>
+          <div>🟢 Customs Documentation</div>
+          <div>🟢 Commercial Invoices</div>
+          <div>🟢 Packing Lists & Certificates</div>
+          <div>🟢 Import/Export Declarations</div>
+          <div>🟢 Compliance Verification</div>
+        </div>
+
+        <a href="#contact" style="
+          display:inline-block;
+          padding:9px 18px;
+          background:#0f4ea8;
+          color:#fff;
+          border-radius:6px;
+          font-size:13px;
+          font-weight:600;
+          text-decoration:none;
+        ">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- ================= SERVICE 3 ================= -->
+    <div style="
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:60px;
+      align-items:center;
+    ">
+
+      <!-- TEXT -->
+      <div>
+        <div style="
+          width:44px;height:44px;
+          background:#475569;
+          border-radius:10px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin-bottom:16px;
+          color:#fff;
+          font-size:20px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+</svg></div>
+
+        <h3 style="font-size:29px;font-weight:800;color:#0f172a;margin-bottom:8px;">
+          Logistics Coordination
+        </h3>
+
+        <p style="font-size:17px;color:#475569;margin-bottom:20px;">
+          End-to-end logistics management for seamless global delivery
+        </p>
+
+        <div style="
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          gap:8px 22px;
+          font-size:15px;
+          margin-bottom:22px;
+        ">
+          <div>🟢 Multi-modal Transportation</div>
+          <div>🟢 Warehouse Management</div>
+          <div>🟢 Inventory Tracking</div>
+          <div>🟢 Delivery Scheduling</div>
+          <div>🟢 Real-time Shipment Updates</div>
+          <div>🟢 Last-mile Delivery Solutions</div>
+        </div>
+
+        <a href="#contact" style="
+          display:inline-block;
+          padding:9px 18px;
+          background:#0f4ea8;
+          color:#fff;
+          border-radius:6px;
+          font-size:13px;
+          font-weight:600;
+          text-decoration:none;
+        ">Contact Us</a>
+      </div>
+
+      <!-- CARD -->
+      <div style="
+        background:#475569;
+        border-radius:18px;
+        padding:55px 40px;
+        text-align:center;
+        color:#ffffff;
+      ">
+        <div style="
+          width:70px;height:70px;
+          background:rgba(255,255,255,0.25);
+          border-radius:50%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:0 auto 18px;
+          font-size:30px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+</svg></div>
+
+        <h4 style="font-size:29px;font-weight:700;margin-bottom:4px;">
+          Logistics Coordination
+        </h4>
+
+        <p style="font-size:17px;opacity:0.95;">
+          Professional Service Excellence
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section style="
+  width:100%;
+  padding:50px 20px;
+  background:#ffffff;
+  overflow:hidden;
+">
+  <div style="max-width:1400px;margin:0 auto;text-align:center;">
+
+    <h2 style="
+      font-size:34px;
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:12px;
+    ">
+      Trusted <span style="color:#3fa9f5;">Logistics Partners</span> 
+    </h2>
+
+    <p style="
+      max-width:720px;
+      margin:0 auto 50px;
+      font-size:16px;
+      color:#64748b;
+      line-height:1.7;
+    ">
+      We partner with industry-leading manufacturers to bring you the highest
+      quality products and solutions.
+    </p>
+
+    <!-- SLIDER -->
+    <div style="
+      position:relative;
+      width:100%;
+      overflow:hidden;
+    ">
+      <div class="brand-track" style="
+        display:flex;
+        gap:24px;
+        width:max-content;
+        animation: brandScroll 35s linear infinite;
+      ">
+
+        <!-- BRAND CARD -->
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/ABB_logo.svg" alt="ABB">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Siemens-logo.svg" alt="Siemens">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Mitsubishi_Electric_logo.svg" alt="Mitsubishi">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Schneider_Electric_logo.svg" alt="Schneider">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/NTN_logo.svg" alt="NTN">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Omron_logo.svg" alt="Omron">
+        </a>
+
+        <!-- DUPLICATE SET FOR INFINITE LOOP -->
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/ABB_logo.svg" alt="ABB">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Siemens-logo.svg" alt="Siemens">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Mitsubishi_Electric_logo.svg" alt="Mitsubishi">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Schneider_Electric_logo.svg" alt="Schneider">
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="
+  width:100%;
+  padding:70px 20px;
+  background:#ffffff;
+  box-sizing:border-box;
+">
+  <div style="
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+  ">
+
+    <!-- Fast & Reliable -->
+    <div style="
+      background:#f7fde8;
+      border:1px solid #d9f99d;
+      border-radius:16px;
+      padding:36px 28px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    ">
+      <div style="
+        width:64px;
+        height:64px;
+        margin:0 auto 18px;
+        background:#65a30d;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+        ⚡
+      </div>
+
+      <h3 style="
+        font-size:20px;
+        font-weight:700;
+        color:#0f172a;
+        margin-bottom:10px;
+      ">
+        Fast &amp; Reliable
+      </h3>
+
+      <p style="
+        font-size:15px;
+        color:#475569;
+        line-height:1.6;
+        margin:0;
+      ">
+        Quick turnaround times with guaranteed delivery schedules
+      </p>
+    </div>
+
+    <!-- Cost Effective -->
+    <div style="
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:16px;
+      padding:36px 28px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    ">
+      <div style="
+        width:64px;
+        height:64px;
+        margin:0 auto 18px;
+        background:#64748b;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+        ✔️
+      </div>
+
+      <h3 style="
+        font-size:20px;
+        font-weight:700;
+        color:#0f172a;
+        margin-bottom:10px;
+      ">
+        Cost Effective
+      </h3>
+
+      <p style="
+        font-size:15px;
+        color:#475569;
+        line-height:1.6;
+        margin:0;
+      ">
+        Optimized routes and bulk shipping for better rates
+      </p>
+    </div>
+
+    <!-- Secure & Safe -->
+    <div style="
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:16px;
+      padding:36px 28px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    ">
+      <div style="
+        width:64px;
+        height:64px;
+        margin:0 auto 18px;
+        background:#64748b;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+        🔒
+      </div>
+
+      <h3 style="
+        font-size:20px;
+        font-weight:700;
+        color:#0f172a;
+        margin-bottom:10px;
+      ">
+        Secure &amp; Safe
+      </h3>
+
+      <p style="
+        font-size:15px;
+        color:#475569;
+        line-height:1.6;
+        margin:0;
+      ">
+        Full insurance coverage and secure handling
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="footer-company-name">MechFlux</h3>
+                <p class="footer-subtitle">Global Supplies</p>
+                <p class="footer-description">Your trusted partner for industrial supplies and equipment worldwide. Delivering quality, reliability, and innovation globally.</p>
+                
+                <nav class="footer-nav">
+                  <a href="/" class="footer-nav-link">Home</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="about.html" class="footer-nav-link">About Us</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="product.html" class="footer-nav-link">Products</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="service.html" class="footer-nav-link">Services</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="contact.html" class="footer-nav-link">Contact</a>
+              </nav>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-follow">
+                    <h4 class="footer-middle-title">Follow Us</h4>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-middle-title">Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+91 886 701 6464</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>sales@mechflux.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">© 2025 MechFlux Global Supplies Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  /* About hero */
+  h1 {
+    font-size: 2.6rem !important;
+  }
+
+  /* Two-column About content */
+  section div[style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: left !important;
+  }
+
+  /* Vision / Mission */
+  section div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why Choose cards → 2 columns */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ---------- MOBILE (≤640px) ---------- */
+@media (max-width: 640px) {
+
+  /* Hero */
+  h1 {
+    font-size: 2.1rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 60px 16px !important;
+  }
+
+  /* Feature card icon size */
+  div[style*="width: 72px"] {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Vision / Mission cards */
+  section div[style*="repeat(2, 1fr)"] {
+    gap: 24px !important;
+  }
+
+  /* Why Choose → single column */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Card padding */
+  div[style*="padding: 40px"] {
+    padding: 30px 22px !important;
+  }
+
+  /* Center text where needed */
+  h2, h3, p {
+    text-align: center !important;
+  }
+}
+
+/* ---------- SMALL DESKTOP (≤1280px) ---------- */
+@media (max-width: 1280px) {
+
+  /* Keep spacing balanced */
+  section div[style*="max-width: 1400px"] {
+    max-width: 1200px !important;
+  }
+}
+</style>
+
+<style>
+/* Brand Card */
+.brand-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:22px 28px;
+  min-width:180px;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:all 0.3s ease;
+  filter:grayscale(100%);
+  border-style: groove;
+}
+
+.brand-card img{
+  max-width:120px;
+  max-height:40px;
+}
+
+/* Hover Effect */
+.brand-card:hover{
+  /* transform:translateY(-6px) scale(1.05); */
+  filter:grayscale(0%);
+  box-shadow:0 14px 30px rgba(0,0,0,0.15);
+    transform:none;
+
+}
+
+/* Infinite Scroll Animation */
+@keyframes brandScroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+/* Pause on Hover */
+.brand-track:hover{
+  animation-play-state:paused;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .brand-card{
+    min-width:150px;
+    height:80px;
+  }
+}
+</style>

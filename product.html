@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <div class="contact-info">
+                            <a href="tel:+1234567890" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+1 (234) 567-890</span>
+                            </a>
+                            <a href="mailto:info@websolutions.com" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>info@websolutions.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <a href="/" class="logo-name">WebSolutions</a>
+                            <span class="logo-subtitle">Digital Excellence</span>
+                        </div>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="/" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="product.html" class="nav-link">Products</a></li>
+                        <li><a href="service.html" class="nav-link">Services</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="contact.html" class="btn-cta">Get Quote</a>
+                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section style="
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0b1220 0%, #102a43 50%, #0b1f3a 100%);
+    padding: 60px 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+">
+    <div style="
+        max-width: 900px;
+        margin: 0 auto;
+    ">
+        <h1 style="
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        ">
+            Our <span style="color: #3fa9f5;"> Product Range</span>
+        </h1>
+
+        <p style="
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin: 0;
+        ">
+            Your trusted global partner for industrial and automation products,
+            delivering excellence across continents.
+        </p>
+    </div>
+</section>
+
+<section style="
+  width:100%;
+  padding:50px 20px;
+  background:#ffffff;
+  overflow:hidden;
+">
+  <div style="max-width:1400px;margin:0 auto;text-align:center;">
+
+    <h2 style="
+      font-size:34px;
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:12px;
+    ">
+      Our <span style="color:#3fa9f5;">Featured</span> Brands
+    </h2>
+
+    <p style="
+      max-width:720px;
+      margin:0 auto 50px;
+      font-size:16px;
+      color:#64748b;
+      line-height:1.7;
+    ">
+      We partner with industry-leading manufacturers to bring you the highest
+      quality products and solutions.
+    </p>
+
+    <!-- SLIDER -->
+    <div style="
+      position:relative;
+      width:100%;
+      overflow:hidden;
+    ">
+      <div class="brand-track" style="
+        display:flex;
+        gap:24px;
+        width:max-content;
+        animation: brandScroll 35s linear infinite;
+      ">
+
+        <!-- BRAND CARD -->
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/ABB_logo.svg" alt="ABB">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Siemens-logo.svg" alt="Siemens">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Mitsubishi_Electric_logo.svg" alt="Mitsubishi">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Schneider_Electric_logo.svg" alt="Schneider">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/NTN_logo.svg" alt="NTN">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Omron_logo.svg" alt="Omron">
+        </a>
+
+        <!-- DUPLICATE SET FOR INFINITE LOOP -->
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/ABB_logo.svg" alt="ABB">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Siemens-logo.svg" alt="Siemens">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Mitsubishi_Electric_logo.svg" alt="Mitsubishi">
+        </a>
+
+        <a href="#" class="brand-card">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Schneider_Electric_logo.svg" alt="Schneider">
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section style="width:100%;padding:50px 20px;background:#ffffff;">
+  <div style="max-width:1300px;margin:0 auto;text-align:center;">
+
+    <h2 style="font-size:34px;font-weight:800;color:#0f172a;margin-bottom:14px;">
+      Product <span style="color:#3fa9f5;">Categories</span>
+    </h2>
+
+    <p style="max-width:760px;margin:0 auto 60px;font-size:16px;color:#475569;line-height:1.7;">
+      Browse through our comprehensive product categories, each designed to meet
+      specific industrial needs with the highest quality standards and reliable performance.
+    </p>
+
+    <div class="categories-grid">
+
+      <div class="category-card active" data-category="mechanical">
+        <div class="icon green">⚙️</div>
+        <h3>Mechanical</h3>
+        <p>Professional-grade mechanical tools and equipment</p>
+      </div>
+
+      <div class="category-card" data-category="electrical">
+        <div class="icon orange">⚡</div>
+        <h3>Electrical</h3>
+        <p>Reliable electrical components and wiring solutions</p>
+      </div>
+
+      <div class="category-card" data-category="automation">
+        <div class="icon gray">🤖</div>
+        <h3>Automation</h3>
+        <p>Advanced automation systems and control solutions</p>
+      </div>
+
+      <div class="category-card" data-category="instrumentation">
+        <div class="icon purple">📊</div>
+        <h3>Instrumentation</h3>
+        <p>Precision measurement and control instruments</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="padding:50px 20px;background:#f8fafc; ">
+  <div id="itemsContainer" style="max-width:1300px;margin:0 auto;"></div>
+</section>
+
+
+<style>
+.categories-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
+}
+
+.category-card{
+  background:#fff;
+  border-radius:14px;
+  padding:30px;
+  text-align:left;
+  border:1px solid #e2e8f0;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.category-card.active{
+  border:2px solid #84cc16;
+}
+
+.category-card:hover{
+  transform:translateY(-4px);
+}
+
+.icon{
+  width:44px;height:44px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+}
+
+.green{background:#65a30d;color:#fff;}
+.orange{background:#f59e0b;color:#fff;}
+.gray{background:#64748b;color:#fff;}
+.purple{background:#8b5cf6;color:#fff;}
+
+.items-header h2{
+  font-size:28px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.items-header p{
+  color:#475569;
+  margin-bottom:30px;
+}
+
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.item-card{
+  background:#fff;
+  border-radius:14px;
+  padding:26px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.item-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.tag{
+  background:#ecfeff;
+  color:#0369a1;
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:999px;
+}
+
+.item-card button{
+  margin-top:14px;
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #64748b;
+  background:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+</style>
+
+<style>
+.categories-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
+}
+
+.category-card{
+  background:#fff;
+  border-radius:14px;
+  padding:30px;
+  text-align:left;
+  border:1px solid #e2e8f0;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.category-card.active{
+  border:2px solid #84cc16;
+}
+
+.category-card:hover{
+  transform:translateY(-4px);
+}
+
+.icon{
+  width:44px;height:44px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+}
+
+.green{background:#65a30d;color:#fff;}
+.orange{background:#f59e0b;color:#fff;}
+.gray{background:#64748b;color:#fff;}
+.purple{background:#8b5cf6;color:#fff;}
+
+.items-header h2{
+  font-size:28px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.items-header p{
+  color:#475569;
+  margin-bottom:30px;
+}
+
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.item-card{
+  background:#fff;
+  border-radius:14px;
+  padding:26px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.item-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.tag{
+  background:#ecfeff;
+  color:#0369a1;
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:999px;
+}
+
+.item-card button{
+  margin-top:14px;
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #64748b;
+  background:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+</style>
+
+<script>
+const itemsData = {
+  mechanical: {
+    title: "Mechanical Products",
+    desc: "Professional-grade mechanical tools and equipment",
+    items: [
+      createItem("Valves","Control and regulate fluid flow",["Gate","Ball","Butterfly","Check"]),
+      createItem("Belts","Transmit power between shafts",["V-Belt","Timing","Flat","Conveyor"]),
+      createItem("Bearings","Reduce friction in machinery",["Ball","Roller","Thrust"]),
+      createItem("Pulleys","Change speed & direction",["V Pulley","Timing Pulley"]),
+      createItem("Valves","Control and regulate fluid flow",["Gate","Ball","Butterfly","Check"]),
+      createItem("Belts","Transmit power between shafts",["V-Belt","Timing","Flat","Conveyor"]),
+      createItem("Bearings","Reduce friction in machinery",["Ball","Roller","Thrust"]),
+      createItem("Pulleys","Change speed & direction",["V Pulley","Timing Pulley"])
+    ]
+  },
+
+  electrical: {
+    title: "Electrical Products",
+    desc: "Reliable electrical components for industrial use",
+    items: [
+      createItem("Switchgear","Power protection devices",["MCB","MCCB","ACB"]),
+      createItem("Cables","Industrial wiring solutions",["Power","Control","Instrumentation"]),
+      createItem("Motors","Energy-efficient motors",["AC","DC","Servo"])
+    ]
+  },
+
+  automation: {
+    title: "Automation Products",
+    desc: "Advanced automation & control systems",
+    items: [
+      createItem("PLC","Programmable logic controllers",["Siemens","ABB","Schneider"]),
+      createItem("HMI","Human machine interfaces",["Touch Panels","Displays"]),
+      createItem("Drives","Motor speed control",["VFD","Servo Drives"])
+    ]
+  },
+
+  instrumentation: {
+    title: "Instrumentation Products",
+    desc: "Precision measurement instruments",
+    items: [
+      createItem("Sensors","Industrial sensors",["Pressure","Temperature","Proximity"]),
+      createItem("Transmitters","Signal transmitters",["Flow","Level","Pressure"]),
+      createItem("Analyzers","Process analyzers",["Gas","pH","Moisture"])
+    ]
+  }
+};
+
+
+function createItem(title, desc, tags){
+  return `
+  <div class="product-card">
+    
+    <!-- Header -->
+    <div class="product-header">
+      <div class="product-icon">📡</div>
+      <div>
+        <h4 class="product-title">${title}</h4>
+        <p class="product-desc">${desc}</p>
+      </div>
+    </div>
+
+    <hr class="product-divider">
+
+    <!-- Types -->
+    <div class="product-types">
+      <p class="types-label">Types:</p>
+      <ul class="types-list">
+        ${tags.map(t => `<li>${t}</li>`).join("")}
+      </ul>
+    </div>
+
+    <!-- Badges -->
+    <div class="product-tags">
+      <span class="pill green">Premium Quality</span>
+      <span class="pill blue">Industrial Grade</span>
+      <span class="pill gray">Warranty</span>
+    </div>
+
+    <!-- Button -->
+    <button class="quote-btn">Request Quote</button>
+
+  </div>`;
+}
+
+
+
+const container = document.getElementById("itemsContainer");
+const categoryCards = document.querySelectorAll(".category-card");
+
+function loadItems(category){
+  const data = itemsData[category];
+  container.innerHTML = `
+    <div class="items-header">
+      <h2>${data.title}</h2>
+      <p>${data.desc}</p>
+    </div>
+    <div class="items-grid">
+      ${data.items.join("")}
+    </div>`;
+}
+
+categoryCards.forEach(card=>{
+  card.addEventListener("click",()=>{
+    categoryCards.forEach(c=>c.classList.remove("active"));
+    card.classList.add("active");
+    loadItems(card.dataset.category);
+  });
+});
+
+// Default
+loadItems("mechanical");
+</script>
+
+
+<section style="
+  width:100%;
+  padding:90px 20px;
+  background:#f7fce9;
+  box-sizing:border-box;
+">
+
+  <div style="
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+  ">
+
+    <h2 style="
+      font-size:36px;
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:16px;
+    ">
+      Need Custom Solutions?
+    </h2>
+
+    <p style="
+      font-size:16px;
+      color:#475569;
+      line-height:1.7;
+      max-width:700px;
+      margin:0 auto 36px;
+    ">
+      We specialize in providing tailored industrial solutions to meet your specific
+      requirements. Contact us to discuss your needs and get a personalized quote.
+    </p>
+
+    <div style="
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+    ">
+
+      <!-- Primary Button -->
+      <a href="#contact" style="
+        background:#1e60aa;
+        color:#ffffff;
+        padding:14px 28px;
+        border-radius:10px;
+        font-size:15px;
+        font-weight:600;
+        text-decoration:none;
+        box-shadow:0 8px 20px rgba(30,96,170,0.25);
+        display:inline-block;
+      ">
+        Get Custom Quote
+      </a>
+
+      <!-- Secondary Button -->
+      <a href="#contact" style="
+        background:transparent;
+        color:#64748b;
+        padding:14px 28px;
+        border-radius:10px;
+        font-size:15px;
+        font-weight:600;
+        text-decoration:none;
+        border:2px solid #94a3b8;
+        display:inline-block;
+      ">
+        Speak to Expert
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="footer-company-name">MechFlux</h3>
+                <p class="footer-subtitle">Global Supplies</p>
+                <p class="footer-description">Your trusted partner for industrial supplies and equipment worldwide. Delivering quality, reliability, and innovation globally.</p>
+                
+                <nav class="footer-nav">
+                  <a href="/" class="footer-nav-link">Home</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="about.html" class="footer-nav-link">About Us</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="product.html" class="footer-nav-link">Products</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="service.html" class="footer-nav-link">Services</a>
+                  <span class="footer-nav-separator">|</span>
+                  <a href="contact.html" class="footer-nav-link">Contact</a>
+              </nav>
+            </div>
+            
+            <div class="footer-middle">
+                <div class="footer-follow">
+                    <h4 class="footer-middle-title">Follow Us</h4>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-middle-title">Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+91 886 701 6464</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>sales@mechflux.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">© 2025 MechFlux Global Supplies Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  /* About hero */
+  h1 {
+    font-size: 2.6rem !important;
+  }
+
+  /* Two-column About content */
+  section div[style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: left !important;
+  }
+
+  /* Vision / Mission */
+  section div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why Choose cards → 2 columns */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ---------- MOBILE (≤640px) ---------- */
+@media (max-width: 640px) {
+
+  /* Hero */
+  h1 {
+    font-size: 2.1rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 60px 16px !important;
+  }
+
+  /* Feature card icon size */
+  div[style*="width: 72px"] {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Vision / Mission cards */
+  section div[style*="repeat(2, 1fr)"] {
+    gap: 24px !important;
+  }
+
+  /* Why Choose → single column */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Card padding */
+  div[style*="padding: 40px"] {
+    padding: 30px 22px !important;
+  }
+
+  /* Center text where needed */
+  h2, h3, p {
+    text-align: center !important;
+  }
+}
+
+/* ---------- SMALL DESKTOP (≤1280px) ---------- */
+@media (max-width: 1280px) {
+
+  /* Keep spacing balanced */
+  section div[style*="max-width: 1400px"] {
+    max-width: 1200px !important;
+  }
+}
+</style>
+
+<style>
+/* Brand Card */
+.brand-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:22px 28px;
+  min-width:180px;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:all 0.3s ease;
+  filter:grayscale(100%);
+  border-style: groove;
+}
+
+.brand-card img{
+  max-width:120px;
+  max-height:40px;
+}
+
+/* Hover Effect */
+.brand-card:hover{
+  /* transform:translateY(-6px) scale(1.05); */
+  filter:grayscale(0%);
+  box-shadow:0 14px 30px rgba(0,0,0,0.15);
+      transform:none;
+
+}
+
+/* Infinite Scroll Animation */
+@keyframes brandScroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+/* Pause on Hover */
+.brand-track:hover{
+  animation-play-state:paused;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .brand-card{
+    min-width:150px;
+    height:80px;
+  }
+}
+</style>
