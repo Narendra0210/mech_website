@@ -968,7 +968,7 @@ body {
 }
 
 .custom-solutions {
-    padding: 75px 20px;
+    padding: 0px 20px 0px 20px;
     background-color: var(--bg-light);
 }
 
@@ -1200,7 +1200,7 @@ body {
 }
 
 .contact-new {
-    padding: 75px 20px;
+    padding: 0px 20px 50px 20px;
     background-color: var(--bg-light);
 }
 
