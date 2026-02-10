@@ -313,3 +313,122 @@ if (cardsSliderTrack && cards.length > 0 && dotsContainer) {
     updateSlider();
 }
 
+// Hero Slider
+const heroSlider = document.getElementById('heroSlider');
+const heroSliderDotsContainer = document.getElementById('heroSliderDots');
+
+if (heroSlider && heroSliderDotsContainer) {
+    const heroSlides = heroSlider.querySelectorAll('.hero-slide');
+    const totalSlides = heroSlides.length;
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const autoPlayDelay = 5000; // 5 seconds
+
+    // Create dots
+    function createHeroDots() {
+        heroSliderDotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'hero-slider-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.addEventListener('click', () => goToHeroSlide(i));
+            heroSliderDotsContainer.appendChild(dot);
+        }
+    }
+
+    // Update slider position
+    function updateHeroSlider() {
+        const translateX = -currentSlide * 100;
+        heroSlider.style.transform = `translateX(${translateX}%)`;
+        
+        // Update dots
+        const dots = heroSliderDotsContainer.querySelectorAll('.hero-slider-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // Go to specific slide
+    function goToHeroSlide(index) {
+        currentSlide = index;
+        updateHeroSlider();
+        resetHeroAutoPlay();
+    }
+
+    // Next slide
+    function nextHeroSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateHeroSlider();
+    }
+
+    // Auto-play functionality
+    function startHeroAutoPlay() {
+        // Clear any existing interval first
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+        autoPlayInterval = setInterval(() => {
+            nextHeroSlide();
+        }, autoPlayDelay);
+    }
+
+    function stopHeroAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    function resetHeroAutoPlay() {
+        stopHeroAutoPlay();
+        startHeroAutoPlay();
+    }
+
+    // Pause on hover
+    const heroSliderWrapper = heroSlider.closest('.hero-slider-wrapper');
+    if (heroSliderWrapper) {
+        heroSliderWrapper.addEventListener('mouseenter', stopHeroAutoPlay);
+        heroSliderWrapper.addEventListener('mouseleave', startHeroAutoPlay);
+    }
+
+    // Touch swipe support
+    let heroTouchStartX = 0;
+    let heroTouchEndX = 0;
+
+    heroSlider.addEventListener('touchstart', (e) => {
+        heroTouchStartX = e.changedTouches[0].screenX;
+        stopHeroAutoPlay();
+    }, { passive: true });
+
+    heroSlider.addEventListener('touchend', (e) => {
+        heroTouchEndX = e.changedTouches[0].screenX;
+        const swipeThreshold = 50;
+        const diff = heroTouchStartX - heroTouchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextHeroSlide();
+            } else {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateHeroSlider();
+            }
+        }
+        startHeroAutoPlay();
+    }, { passive: true });
+
+    // Initialize - ensure auto-scroll starts properly
+    function initHeroSlider() {
+        createHeroDots();
+        updateHeroSlider();
+        // Start auto-play with 5 second intervals
+        startHeroAutoPlay();
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeroSlider);
+    } else {
+        initHeroSlider();
+    }
+}

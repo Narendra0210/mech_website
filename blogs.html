@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <div class="contact-info">
+                            <a href="tel:+1234567890" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+1 (234) 567-890</span>
+                            </a>
+                            <a href="mailto:info@websolutions.com" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>info@websolutions.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <a href="/" class="logo-name">WebSolutions</a>
+                            <span class="logo-subtitle">Digital Excellence</span>
+                        </div>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="/" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                        <li><a href="product.html" class="nav-link">Products</a></li>
+                        <li><a href="service.html" class="nav-link">Services</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="contact.html" class="btn-cta">Get Quote</a>
+                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<!-- HERO SECTION -->
+<section style="
+width: 100%;
+min-height: 60vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: linear-gradient(135deg, #0b1220 0%, #102a43 50%, #0b1f3a 100%);
+padding: 60px 20px;
+box-sizing: border-box;
+margin-top:100px;
+">
+
+<div style="max-width: 900px;margin: 0 auto;">
+
+<h1 style="
+font-size: 3.2rem;
+font-weight: 800;
+color: #ffffff;
+margin-bottom: 20px;
+line-height: 1.2;
+">
+Industry <span style="color:#3fa9f5;">Blogs</span>
+</h1>
+
+<p style="
+font-size: 1.2rem;
+color: rgba(255, 255, 255, 0.9);
+line-height: 1.7;
+margin: 0;
+">
+Explore expert insights on industrial automation,
+global sourcing, and supply chain strategies.
+</p>
+
+</div>
+</section>
+
+
+<!-- BLOG GRID SECTION -->
+<section class="blog-section" style="
+width:100%;
+padding:90px 20px;
+background:#f8fafc;
+box-sizing:border-box;
+">
+
+<div style="max-width:1200px;margin:auto;width:100%;">
+
+<div class="blog-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;">
+
+<!-- BLOG 1 -->
+<div style="background:#fff;border-radius:14px;padding:30px;box-shadow:0 10px 25px rgba(0,0,0,0.08);position:relative;">
+
+<input type="checkbox" id="b1" style="display:none;">
+
+<h3 style="font-size:20px;font-weight:700;margin-bottom:12px;">
+Future of Industrial Automation
+</h3>
+
+<p style="font-size:14px;color:#475569;    margin-bottom: 20px;">
+Automation is transforming industries globally...
+</p>
+
+<label for="b1" style="background:#145ea8;padding:8px 16px;border-radius:6px;color:white;cursor:pointer;">
+Read More
+</label>
+
+<div class="modal">
+<div class="modal-box">
+<label for="b1" class="close">✕</label>
+
+<h2>Future of Industrial Automation</h2>
+<p>
+Automation is transforming industries globally.
+Smart factories, robotics, AI maintenance systems,
+predictive analytics, and Industry 4.0 integration
+are driving efficiency and productivity worldwide.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<!-- BLOG 2 -->
+<div style="background:#fff;border-radius:14px;padding:30px;box-shadow:0 10px 25px rgba(0,0,0,0.08);position:relative;">
+
+<input type="checkbox" id="b2" style="display:none;">
+
+<h3 style="font-size:20px;font-weight:700;margin-bottom:12px;">
+Choosing a Global Electrical Supplier
+</h3>
+
+<p style="font-size:14px;color:#475569;margin-bottom: 20px;">
+Selecting the right supplier ensures certified quality...
+</p>
+
+<label for="b2" style="background:#145ea8;padding:8px 16px;border-radius:6px;color:white;cursor:pointer;">
+Read More
+</label>
+
+<div class="modal">
+<div class="modal-box">
+<label for="b2" class="close">✕</label>
+
+<h2>Choosing the Right Supplier</h2>
+<p>
+Reliable logistics, certified products,
+and strong partnerships minimize procurement risk
+and improve performance in global projects.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<!-- BLOG 3 -->
+<div style="background:#fff;border-radius:14px;padding:30px;box-shadow:0 10px 25px rgba(0,0,0,0.08);position:relative;">
+
+<input type="checkbox" id="b3" style="display:none;">
+
+<h3 style="font-size:20px;font-weight:700;margin-bottom:12px;">
+Supply Chain Optimization 2025
+</h3>
+
+<p style="font-size:14px;color:#475569;    margin-bottom: 20px;">
+Digital logistics are redefining international trade...
+</p>
+
+<label for="b3" style="background:#145ea8;padding:8px 16px;border-radius:6px;color:white;cursor:pointer;">
+Read More
+</label>
+
+<div class="modal">
+<div class="modal-box">
+<label for="b3" class="close">✕</label>
+
+<h2>Supply Chain Optimization</h2>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, provident maiores, beatae ut eos amet 
+ex corrupti eius recusandae possimus vel obcaecati expedita, 
+unde tempora natus deserunt laborum libero mollitia. Nesciunt rerum ut provident! 
+Alias necessitatibus ut consequuntur dolorem doloremque, expedita, eveniet, minima ratione 
+facere pariatur aliquam cupiditate incidunt illo eligendi. Molestiae saepe, voluptatem magni
+ sit eum a consequatur laborum architecto ea harum quis, beatae voluptates tenetur facere esse
+  exercitationem odio! Molestias laborum consequatur atque earum perferendis rerum esse repellendus! 
+  Doloribus alias possimus, officiis a molestias libero iste? Mollitia eos, incidunt vitae rem 
+  aliquid quis iure tempore quae provident natus.
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sunt cumque 
+  voluptatibus optio alias eligendi sint ea ratione perferendis necessitatibus 
+  quos quidem ad quam, exercitationem autem. Nihil, architecto. Deleniti at quasi 
+  debitis atque incidunt odit provident voluptates dolores perspiciatis repellat, 
+  excepturi dolor saepe cupiditate pariatur dolore, natus accusantium explicabo 
+  laboriosam doloremque voluptate? Dolore magnam fugiat veniam at similique enim
+   optio, omnis cumque? Aliquam labore ducimus dolores beatae, earum modi 
+   praesentium voluptatem exercitationem pariatur sequi veniam voluptates, 
+   illo reprehenderit, eaque veritatis tenetur placeat? Consequuntur hic sunt 
+   ipsam sint cupiditate, enim itaque maxime omnis illum aliquam, eaque magnam 
+   corporis fuga ex voluptatibus?
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<style>
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:9999;
+}
+
+.modal-box{
+background:white;
+width:90%;
+max-width:800px;
+max-height:90vh;
+overflow:auto;
+padding:40px;
+border-radius:12px;
+position:relative;
+}
+
+.close{
+position:absolute;
+top:14px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+}
+
+/* POPUP LOGIC */
+#b1:checked ~ .modal,
+#b2:checked ~ .modal,
+#b3:checked ~ .modal{
+opacity:1;
+pointer-events:auto;
+}
+</style>
+
+</section>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="footer-company-name">Mech Electric</h3>
+                <p class="footer-subtitle">Global Supplies</p>
+                <p class="footer-description">Your trusted partner for industrial supplies and equipment worldwide. Delivering quality, reliability, and innovation globally.</p>
+                
+                <nav class="footer-nav">
+                    <a href="/" class="footer-nav-link">Home</a>
+                    <span class="footer-nav-separator">|</span>
+                    <a href="about.html" class="footer-nav-link">About Us</a>
+                    <span class="footer-nav-separator">|</span>
+                    <a href="product.html" class="footer-nav-link">Products</a>
+                    <span class="footer-nav-separator">|</span>
+                    <a href="service.html" class="footer-nav-link">Services</a>
+                    <span class="footer-nav-separator">|</span>
+                    <a href="contact.html" class="footer-nav-link">Contact</a>
+                </nav>
+            </div>
+            
+            <div class="footer-middle">
+                <div class="footer-follow">
+                    <h4 class="footer-middle-title">Follow Us</h4>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-middle-title">Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+91 886 701 6464</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>sales@MechElectric.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">© 2025 Mech Electric Global Supplies Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  /* About hero */
+  h1 {
+    font-size: 2.6rem !important;
+  }
+
+  /* Blog grid - 2 columns on tablet */
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  /* Blog section - ensure full width */
+  .blog-section {
+    width: 100% !important;
+  }
+
+  .blog-section > div {
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Two-column About content */
+  section div[style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: left !important;
+  }
+
+  /* Vision / Mission */
+  section div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why Choose cards → 2 columns */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ---------- MOBILE (≤640px) ---------- */
+@media (max-width: 640px) {
+
+  /* Hero */
+  h1 {
+    font-size: 2.1rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 60px 16px !important;
+  }
+
+  /* Blog section - full width on mobile */
+  .blog-section {
+    padding: 60px 0 !important;
+    width: 100% !important;
+  }
+
+  .blog-section > div {
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  /* Blog grid - single column on mobile */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  /* Feature card icon size */
+  div[style*="width: 72px"] {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Vision / Mission cards */
+  section div[style*="repeat(2, 1fr)"] {
+    gap: 24px !important;
+  }
+
+  /* Why Choose → single column */
+  section div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Card padding */
+  div[style*="padding: 40px"] {
+    padding: 30px 22px !important;
+  }
+
+  /* Center text where needed */
+  h2, h3, p {
+    text-align: center !important;
+  }
+}
+
+/* ---------- SMALL DESKTOP (≤1280px) ---------- */
+@media (max-width: 1280px) {
+
+  /* Keep spacing balanced */
+  section div[style*="max-width: 1400px"] {
+    max-width: 1200px !important;
+  }
+}
+
+/* ---------- MEDIUM TABLET (641px - 768px) ---------- */
+@media (min-width: 641px) and (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+</style>
