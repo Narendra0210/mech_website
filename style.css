@@ -155,18 +155,24 @@ body {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
     color: var(--primary-blue);
     flex-shrink: 0;
 }
 
 .logo-text {
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
 .logo-name {
@@ -345,23 +351,23 @@ body {
     justify-content: center;
     box-sizing: border-box;
     background-color: #1e293b;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
     position: relative;
     margin: 0;
     padding: 0;
 }
 
 /* Slide 1 - Desktop background */
-.hero-slide-1 {
+/* .hero-slide-1 {
     background-image: url('assets/image/background1.png');
-}
+} */
 
 /* Slide 2 - Desktop background */
-.hero-slide-2 {
+/* .hero-slide-2 {
     background-image: url('assets/image/background1.png');
-}
+} */
 
 .hero-content {
     max-width: 800px;
@@ -1899,18 +1905,18 @@ body {
     }
     
     /* Slide 1 - Mobile background */
-    .hero-slide-1 {
+    /* .hero-slide-1 {
         background-image: url('assets/image/background2.png') !important;
-    }
+    } */
     
     /* Slide 2 - Mobile background */
-    .hero-slide-2 {
+    /* .hero-slide-2 {
         background-image: url('assets/image/background2.png') !important;
-    }
+    } */
     
-    .hero-slide {
+    /* .hero-slide {
         background-size: cover;
-    }
+    } */
     
     .hero-content {
         max-width: 500px;
@@ -2196,6 +2202,12 @@ body {
   align-items:center;
   justify-content:center;
   font-size:18px;
+}
+
+.product-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #0f172a;
 }
 
 .product-title{
