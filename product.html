@@ -13,18 +13,18 @@
                 <div class="top-bar-content">
                     <div class="top-bar-left">
                         <div class="contact-info">
-                            <a href="tel:+1234567890" class="contact-item">
+                            <a href="tel:+917019381881" class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
-                                <span>+1 (234) 567-890</span>
+                                <span>+91 70193 81881</span>
                             </a>
-                            <a href="mailto:info@websolutions.com" class="contact-item">
+                            <a href="mailto:sales@mechelectricsolution.co" class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
-                                <span>info@websolutions.com</span>
+                                <span>sales@mechelectricsolution.co</span>
                             </a>
                         </div>
                     </div>
@@ -440,6 +440,136 @@
   font-weight:600;
   cursor:pointer;
 }
+
+.product-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:#fff;
+  border-radius:14px;
+  padding:26px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.product-header{
+  display:flex;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+.product-icon{
+  flex-shrink:0;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#3fa9f5;
+}
+
+.product-title{
+  font-size:18px;
+  font-weight:700;
+  color:#0f172a;
+  margin:0 0 4px 0;
+}
+
+.product-desc{
+  font-size:14px;
+  color:#64748b;
+  margin:0;
+  line-height:1.5;
+}
+
+.product-divider{
+  border:none;
+  border-top:1px solid #e2e8f0;
+  margin:16px 0;
+}
+
+.product-types{
+  margin-bottom:16px;
+}
+
+.types-label{
+  font-size:13px;
+  font-weight:600;
+  color:#0f172a;
+  margin:0 0 8px 0;
+}
+
+.types-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.types-list li{
+  font-size:13px;
+  color:#475569;
+  padding-left:16px;
+  position:relative;
+}
+
+.types-list li:before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#3fa9f5;
+}
+
+.product-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.pill{
+  font-size:11px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.pill.green{
+  background:#ecfdf5;
+  color:#059669;
+}
+
+.pill.blue{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+.pill.gray{
+  background:#f1f5f9;
+  color:#475569;
+}
+
+.quote-btn{
+  margin-top:auto;
+  width:100%;
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  background:#1e60aa;
+  color:#fff;
+  font-weight:600;
+  font-size:14px;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+
+.quote-btn:hover{
+  background:#155a9e;
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(30,96,170,0.3);
+}
 </style>
 
 <script>
@@ -676,6 +806,7 @@ function createItem(title, desc, tags){
 
 const container = document.getElementById("itemsContainer");
 const categoryCards = document.querySelectorAll(".category-card");
+const categoriesWrapper = document.querySelector(".categories-wrapper");
 
 function loadItems(category){
   const data = itemsData[category];
@@ -689,12 +820,92 @@ function loadItems(category){
     </div>`;
 }
 
-categoryCards.forEach(card=>{
-  card.addEventListener("click",()=>{
-    categoryCards.forEach(c=>c.classList.remove("active"));
-    card.classList.add("active");
-    loadItems(card.dataset.category);
+// Check if we're on mobile
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+// Handle category selection
+function selectCategory(card) {
+  categoryCards.forEach(c => c.classList.remove("active"));
+  card.classList.add("active");
+  loadItems(card.dataset.category);
+}
+
+// Desktop: Click handler
+categoryCards.forEach(card => {
+  card.addEventListener("click", (e) => {
+    // On mobile, prevent click from changing products
+    if (isMobile()) {
+      e.preventDefault();
+      return;
+    }
+    // Desktop: allow click to change products
+    selectCategory(card);
   });
+});
+
+// Mobile: Detect which card is snapped into view on scroll
+let scrollTimeout = null;
+let scrollListener = null;
+let currentActiveCard = null;
+
+function checkActiveCardOnScroll() {
+  if (!isMobile() || !categoriesWrapper) return;
+  
+  const wrapperRect = categoriesWrapper.getBoundingClientRect();
+  const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
+  
+  let closestCard = null;
+  let closestDistance = Infinity;
+  
+  categoryCards.forEach(card => {
+    const cardRect = card.getBoundingClientRect();
+    const cardCenter = cardRect.left + cardRect.width / 2;
+    const distance = Math.abs(cardCenter - wrapperCenter);
+    
+    // Check if card is visible in the viewport
+    if (cardRect.left < wrapperRect.right && cardRect.right > wrapperRect.left) {
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestCard = card;
+      }
+    }
+  });
+  
+  if (closestCard && currentActiveCard !== closestCard) {
+    currentActiveCard = closestCard;
+    selectCategory(closestCard);
+  }
+}
+
+function setupMobileScrollListener() {
+  // Remove existing listener if any
+  if (scrollListener && categoriesWrapper) {
+    categoriesWrapper.removeEventListener('scroll', scrollListener);
+    scrollListener = null;
+  }
+  
+  if (!isMobile() || !categoriesWrapper) {
+    return;
+  }
+
+  // Create scroll listener with debouncing
+  scrollListener = () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(checkActiveCardOnScroll, 50);
+  };
+  
+  categoriesWrapper.addEventListener('scroll', scrollListener, { passive: true });
+  
+  // Check initial state after a short delay to ensure layout is complete
+  setTimeout(checkActiveCardOnScroll, 100);
+}
+
+// Setup on load and resize
+setupMobileScrollListener();
+window.addEventListener('resize', () => {
+  setupMobileScrollListener();
 });
 
 // Default
@@ -785,11 +996,7 @@ loadItems("mechanical");
         <div class="container">
             <div class="footer-top">
                 <div class="footer-logo-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
-                    </svg>
+                    <img src="assets/image/icon_transparent_xl.png" alt="Mech Electric Logo" style="width: 60px; height: 60px;">
                 </div>
                 <h3 class="footer-company-name">Mech Electric</h3>
                 <p class="footer-subtitle">Trustred partner</p>
