@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Web Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      @media (max-width: 768px) {
+        .contact-top-row {
+          grid-template-columns: 1fr !important;
+        }
+        .contact-bottom-row {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
 </head>
 <body>
  <header class="header" id="header">
@@ -71,6 +81,7 @@
                         <li><a href="about.html" class="nav-link">About Us</a></li>
                          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                         <li><a href="product.html" class="nav-link">Products</a></li>
+                        <li><a href="catelogue.html" class="nav-link">Catelogue</a></li>
                         <li><a href="service.html" class="nav-link">Services</a></li>
                         <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -136,149 +147,217 @@ Planning your industrial requirements? Our experienced team is here to deliver t
   <div style="
     max-width:1200px;
     margin:0 auto;
-    display:grid;
-    grid-template-columns:1.2fr 0.8fr;
-    gap:40px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
   ">
 
-    <!-- LEFT FORM -->
-    <div style="
- background: linear-gradient(135deg, #00192F, #003A5C);
-      border-radius:16px;
-      padding:36px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    <!-- TOP ROW: Form and Address -->
+    <div class="contact-top-row" style="
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:40px;
     ">
-      <h2 style="
-        font-size:26px;
-        font-weight:800;
-        color:#ffffff;
-        margin-bottom:24px;
+      <!-- LEFT FORM -->
+      <div style="
+        background: linear-gradient(135deg, #00192F, #003A5C);
+        border-radius:16px;
+        padding:36px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+        height: fit-content;
       ">
-        Send us a Message
-      </h2>
-
-      <form>
-        <!-- Row 1 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
-          <div>
-            <label style="font-size:14px;font-weight:600;color:#ffffff;">Full Name *</label>
-            <input type="text" placeholder="Enter your full name" style="
-              width:100%;
-              margin-top:6px;
-              padding:12px 14px;
-              border-radius:8px;
-              border:1px solid #dbeafe;
-              font-size:14px;
-                 color:#ffffff;
-            ">
-          </div>
-          <div>
-            <label style="font-size:14px;font-weight:600;color:#ffffff;">Mobile *</label>
-            <input type="text" placeholder="Enter your mobile number" style="
-              width:100%;
-              margin-top:6px;
-              padding:12px 14px;
-              border-radius:8px;
-              border:1px solid #dbeafe;
-              font-size:14px;
-            ">
-          </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
-          <div>
-            <label style="font-size:14px;font-weight:600;color:#ffffff;">Email Address *</label>
-            <input type="email" placeholder="Enter your email address" style="
-              width:100%;
-              margin-top:6px;
-              padding:12px 14px;
-              border-radius:8px;
-              border:1px solid #dbeafe;
-              font-size:14px;
-            ">
-          </div>
-          <div>
-            <label style="font-size:14px;font-weight:600;color:#ffffff;">Company</label>
-            <input type="text" placeholder="Enter your company name" style="
-              width:100%;
-              margin-top:6px;
-              padding:12px 14px;
-              border-radius:8px;
-              border:1px solid #dbeafe;
-              font-size:14px;
-            ">
-          </div>
-        </div>
-
-        <!-- Message -->
-        <div style="margin-bottom:24px;">
-          <label style="font-size:14px;font-weight:600;color:#ffffff;">Message *</label>
-          <textarea placeholder="Tell us about your project or inquiry..." style="
-            width:100%;
-            margin-top:6px;
-            padding:14px;
-            border-radius:10px;
-            border:1px solid #dbeafe;
-            min-height:140px;
-            font-size:14px;
-            resize:none;
-          "></textarea>
-        </div>
-
-        <!-- Button -->
-        <button type="submit" style="
-          width:100%;
-          padding:14px;
-          border:none;
-          border-radius:10px;
-          background:#145ea8;
+        <h2 style="
+          font-size:26px;
+          font-weight:800;
           color:#ffffff;
-          font-size:15px;
-          font-weight:700;
-          cursor:pointer;
-          box-shadow:0 10px 20px rgba(20,94,168,0.3);
+          margin-bottom:24px;
         ">
-          Send Message
-        </button>
-      </form>
-    </div>
+          Send us a Message
+        </h2>
 
-    <!-- RIGHT INFO -->
-    <div style="display:flex;flex-direction:column;gap:22px;">
+        <form id="contactForm">
+          <!-- Row 1 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label style="font-size:14px;font-weight:600;color:#ffffff;">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required style="
+                width:100%;
+                margin-top:6px;
+                padding:12px 14px;
+                border-radius:8px;
+                border:1px solid #dbeafe;
+                font-size:14px;
+                color:#000000;
+                background-color:#ffffff;
+              ">
+            </div>
+            <div>
+              <label style="font-size:14px;font-weight:600;color:#ffffff;">Mobile *</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" required 
+                pattern="[0-9]{10}" 
+                maxlength="10"
+                style="
+                width:100%;
+                margin-top:6px;
+                padding:12px 14px;
+                border-radius:8px;
+                border:1px solid #dbeafe;
+                font-size:14px;
+                color:#000000;
+                background-color:#ffffff;
+              ">
+              <small style="color:#dbeafe;font-size:12px;display:block;margin-top:4px;">Enter exactly 10 digits</small>
+            </div>
+          </div>
 
-      <!-- Address -->
+          <!-- Row 2 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label style="font-size:14px;font-weight:600;color:#ffffff;">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                style="
+                width:100%;
+                margin-top:6px;
+                padding:12px 14px;
+                border-radius:8px;
+                border:1px solid #dbeafe;
+                font-size:14px;
+                color:#000000;
+                background-color:#ffffff;
+              ">
+            </div>
+            <div>
+              <label style="font-size:14px;font-weight:600;color:#ffffff;">Company</label>
+              <input type="text" id="company" name="company" placeholder="Enter your company name" style="
+                width:100%;
+                margin-top:6px;
+                padding:12px 14px;
+                border-radius:8px;
+                border:1px solid #dbeafe;
+                font-size:14px;
+                color:#000000;
+                background-color:#ffffff;
+              ">
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div style="margin-bottom:24px;">
+            <label style="font-size:14px;font-weight:600;color:#ffffff;">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required style="
+              width:100%;
+              margin-top:6px;
+              padding:14px;
+              border-radius:10px;
+              border:1px solid #dbeafe;
+              min-height:140px;
+              font-size:14px;
+              resize:none;
+              color:#000000;
+              background-color:#ffffff;
+            "></textarea>
+          </div>
+
+          <!-- Message Display -->
+          <div id="formMessage" style="
+            margin-bottom:16px;
+            padding:12px;
+            border-radius:8px;
+            display:none;
+            font-size:14px;
+            text-align:center;
+          "></div>
+
+          <!-- Button -->
+          <button type="submit" id="submitBtn" style="
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            background:#145ea8;
+            color:#ffffff;
+            font-size:15px;
+            font-weight:700;
+            cursor:pointer;
+            box-shadow:0 10px 20px rgba(20,94,168,0.3);
+          ">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- RIGHT ADDRESS -->
       <div style="
         background:#ffffff;
         border-radius:14px;
         padding:22px;
         box-shadow:0 8px 20px rgba(0,0,0,0.08);
-        display:flex;
-        gap:16px;
-        align-items:flex-start;
       ">
         <div style="
-          width:44px;height:44px;    
-           background: linear-gradient(135deg, #1868c4, #1ea6e6); 
-          border-radius:10px;
           display:flex;
-          align-items:center;
-          justify-content:center;
-          font-size:18px;
-        "><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+          gap:16px;
+          align-items:flex-start;
+          margin-bottom:20px;
+        ">
+          <div style="
+            width:44px;height:44px;    
+            background: linear-gradient(135deg, #1868c4, #1ea6e6); 
+            border-radius:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:18px;
+            flex-shrink:0;
+          "><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
   <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
   <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
 </svg>
+          </div>
+          <div style="flex:1;">
+            <h4 style="margin:0 0 6px;font-size:16px;font-weight:700;">Address</h4>
+            <p style="margin:0;font-size:14px;color:#475569;line-height:1.6;">
+              No 22 1st Main Road opp Boothappa Temple<br>
+             Nagadevanahalli, Bangalore 560056.
+             <br>
+             GST Number :29CHTPB2719P1ZM
+             <br>
+             TAN: BLRB28779C
+             <br>
+            UDYAM: UDYAM-KR-03-0478198
+            </p>
+          </div>
         </div>
-        <div>
-          <h4 style="margin:0 0 6px;font-size:16px;font-weight:700;">Address</h4>
-          <p style="margin:0;font-size:14px;color:#475569;line-height:1.6;">
-            No 22 1st Main Road opp Boothappa Temple<br>
-           Nagadevanahalli, Bangalore 560056.
-          </p>
+        
+        <!-- Google Map -->
+        <div style="
+          width:100%;
+          height:300px;
+          border-radius:10px;
+          overflow:hidden;
+          margin-top:16px;
+          box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        ">
+          <iframe 
+            src="https://www.google.com/maps?q=12.93625,77.4915&hl=en&z=15&output=embed"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mech Electric Location">
+          </iframe>
         </div>
       </div>
+    </div>
 
+    <!-- BOTTOM ROW: Phone, Email, Follow Us -->
+    <div class="contact-bottom-row" style="
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:20px;
+    ">
       <!-- Phone -->
       <div style="
         background:#ffffff;
@@ -316,7 +395,7 @@ Planning your industrial requirements? Our experienced team is here to deliver t
       ">
         <div style="
           width:44px;height:44px;
-     background: linear-gradient(135deg, #1868c4, #1ea6e6); 
+          background: linear-gradient(135deg, #1868c4, #1ea6e6); 
           border-radius:10px;
           display:flex;
           align-items:center;
@@ -327,7 +406,7 @@ Planning your industrial requirements? Our experienced team is here to deliver t
           <h4 style="margin:0 0 6px;font-size:16px;font-weight:700;">Email</h4>
           <p style="margin:0;font-size:14px;color:#475569;">sales@mechelectricsolution.co</p>
           <p style="margin:0;font-size:14px;color:#475569;">mechelectricsolutionco@gmail.com</p>
-          <!-- <p style="margin:0;font-size:14px;color:#475569;">sales@MechElectric.com</p> -->
+          <p style="margin:0;font-size:14px;color:#475569;">info@mechelectricsolution.co</p>
         </div>
       </div>
 
@@ -357,7 +436,6 @@ Planning your industrial requirements? Our experienced team is here to deliver t
                             </svg></span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -446,7 +524,7 @@ Planning your industrial requirements? Our experienced team is here to deliver t
                 <div class="footer-logo-icon">
                     <img src="assets/image/icon_transparent_xl.png" alt="Mech Electric Logo" style="width: 60px; height: 60px;">
                 </div>
-                <h3 class="footer-company-name">Mech Electric</h3>
+                <h3 class="footer-company-name">Mech Electric Solution Co.</h3>
                 <p class="footer-subtitle">Trustred partner</p>
                 <p class="footer-description">The global partner you trust for industrial excellence — driven by quality, reliability, and innovation.</p>
                 
@@ -515,6 +593,115 @@ Planning your industrial requirements? Our experienced team is here to deliver t
             </div>
         </div>
     </footer>
+    
+    <!-- EmailJS Script -->
+    <!-- 
+      ============================================
+      EMAILJS SETUP INSTRUCTIONS (Quick Start)
+      ============================================
+      
+      1. SIGN UP: Go to https://www.emailjs.com/ → Sign Up (Free)
+      
+      2. ADD EMAIL SERVICE:
+         - Dashboard → Email Services → Add New Service
+         - Choose Gmail → Connect krnarendra2000@gmail.com
+         - Copy the Service ID (looks like: service_xxxxx)
+      
+      3. CREATE TEMPLATE:
+         - Dashboard → Email Templates → Create New Template
+         - To Email: krnarendra2000@gmail.com
+         - Subject: New Contact: {{from_name}}
+         - Content:
+           Name: {{from_name}}
+           Email: {{from_email}}
+           Mobile: {{mobile}}
+           Company: {{company}}
+           Message: {{message}}
+         - Copy the Template ID (looks like: template_xxxxx)
+      
+      4. GET PUBLIC KEY:
+         - Dashboard → Account → General → API Keys
+         - Copy your Public Key
+      
+      5. UPDATE BELOW: Replace the 3 placeholders with your actual values
+      
+      ============================================
+    -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script>
+      // ============================================
+      // STEP 5: Replace these 3 values with your EmailJS credentials
+      // ============================================
+      const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";        // From: Account → API Keys
+      const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";        // From: Email Services
+      const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";      // From: Email Templates
+      // ============================================
+      
+      // Initialize EmailJS
+      (function(){
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+      })();
+
+      // Handle form submission
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formMessage.style.display = 'none';
+        
+        // Get form values
+        const formData = {
+          from_name: document.getElementById('fullName').value,
+          from_email: document.getElementById('email').value,
+          mobile: document.getElementById('mobile').value,
+          company: document.getElementById('company').value || 'Not provided',
+          message: document.getElementById('message').value,
+          to_email: 'krnarendra2000@gmail.com'
+        };
+        
+        // Send email using EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
+          .then(function(response) {
+            // Success
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = '#10b981';
+            formMessage.style.color = '#ffffff';
+            formMessage.textContent = 'Message sent successfully! We will get back to you soon.';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+            
+            // Hide message after 5 seconds
+            setTimeout(function() {
+              formMessage.style.display = 'none';
+            }, 5000);
+          }, function(error) {
+            // Error
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = '#ef4444';
+            formMessage.style.color = '#ffffff';
+            formMessage.textContent = 'Failed to send message. Please try again or contact us directly.';
+            
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+            
+            console.error('EmailJS Error:', error);
+          });
+      });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>

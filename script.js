@@ -38,7 +38,9 @@ window.addEventListener('DOMContentLoaded', () => {
         // Normalize current page
         const isHomePage = currentPage === '' || currentPage === 'index.html' || currentPath.endsWith('/');
         const isAboutPage = currentPage === 'about.html' || currentPath.includes('about.html');
+        const isblogs = currentPage === 'blogs.html' || currentPath.includes('blogs.html');
         const isProductPage = currentPage === 'product.html' || currentPath.includes('product.html');
+        const iscatelogue = currentPage === 'catelogue.html' || currentPath.includes('catelogue.html');
         const isServicePage = currentPage === 'service.html' || currentPath.includes('service.html');
         const isContactPage = currentPage === 'contact.html' || currentPath.includes('contact.html');
         
@@ -53,6 +55,11 @@ window.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         } else if (isContactPage && linkPath === 'contact.html') {
             link.classList.add('active');
+        }else if (isblogs && linkPath === 'blogs.html'){
+            link.classList.add('active');
+        }else if(iscatelogue && linkPath === 'catelogue.html'){
+             link.classList.add('active');
+
         }
     });
 });

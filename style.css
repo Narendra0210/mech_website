@@ -720,7 +720,8 @@ body {
 .brands-slider {
     display: flex;
     gap: 24px;
-    animation: slideLeft 3s linear infinite;
+    width: max-content;
+    animation: rotateBrands 40s linear infinite;
     will-change: transform;
 }
 
@@ -732,6 +733,7 @@ body {
     width: 180px;
     height: 180px;
     min-width: 180px;
+    flex-shrink: 0;
     background-color: var(--bg-white);
     border-radius: 12px;
     /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
@@ -754,7 +756,7 @@ body {
     text-align: center;
 }
 
-@keyframes slideLeft {
+@keyframes rotateBrands {
     0% {
         transform: translateX(0);
     }
