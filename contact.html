@@ -81,7 +81,7 @@
                         <li><a href="about.html" class="nav-link">About Us</a></li>
                          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                         <li><a href="product.html" class="nav-link">Products</a></li>
-                        <li><a href="catelogue.html" class="nav-link">Catelogue</a></li>
+                        <li><a href="catelogue.html" class="nav-link">Catalogue</a></li>
                         <li><a href="service.html" class="nav-link">Services</a></li>
                         <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -405,8 +405,8 @@ Planning your industrial requirements? Our experienced team is here to deliver t
         <div>
           <h4 style="margin:0 0 6px;font-size:16px;font-weight:700;">Email</h4>
           <p style="margin:0;font-size:14px;color:#475569;">sales@mechelectricsolution.co</p>
-          <p style="margin:0;font-size:14px;color:#475569;">mechelectricsolutionco@gmail.com</p>
           <p style="margin:0;font-size:14px;color:#475569;">info@mechelectricsolution.co</p>
+          <p style="margin:0;font-size:14px;color:#475569;">mechelectricsolutionco@gmail.com/p>
         </div>
       </div>
 
@@ -493,7 +493,7 @@ Planning your industrial requirements? Our experienced team is here to deliver t
         box-shadow:0 10px 25px rgba(0,0,0,0.25);
         display:inline-block;
       ">
-        Call Us Now
+        Call Us
       </a>
 
       <!-- Email Button -->
@@ -508,7 +508,7 @@ Planning your industrial requirements? Our experienced team is here to deliver t
         border:1.5px solid rgba(255,255,255,0.7);
         display:inline-block;
       ">
-        Email Us
+        Email
       </a>
     </div>
 
@@ -631,17 +631,68 @@ Planning your industrial requirements? Our experienced team is here to deliver t
     
     <script>
       // ============================================
-      // STEP 5: Replace these 3 values with your EmailJS credentials
+      // EmailJS Configuration
       // ============================================
-      const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";        // From: Account → API Keys
-      const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";        // From: Email Services
-      const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";      // From: Email Templates
+      const EMAILJS_PUBLIC_KEY = "OpUim_G5OK4kO3fYK";        // From: Account → API Keys
+      const EMAILJS_SERVICE_ID = "service_p618i7r";        // From: Email Services
+      const EMAILJS_TEMPLATE_ID = "template_t8lqd1n";      // From: Email Templates
       // ============================================
       
       // Initialize EmailJS
       (function(){
         emailjs.init(EMAILJS_PUBLIC_KEY);
       })();
+
+      // Validation functions
+      function validateMobile(mobile) {
+        // Remove any non-digit characters
+        const digitsOnly = mobile.replace(/\D/g, '');
+        // Check if exactly 10 digits
+        return digitsOnly.length === 10;
+      }
+
+      function validateEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email);
+      }
+
+      // Mobile input validation - only allow numbers and limit to 10 digits
+      const mobileInput = document.getElementById('mobile');
+      mobileInput.addEventListener('input', function(e) {
+        // Remove any non-digit characters
+        let value = e.target.value.replace(/\D/g, '');
+        // Limit to 10 digits
+        if (value.length > 10) {
+          value = value.slice(0, 10);
+        }
+        e.target.value = value;
+        
+        // Update validation message
+        const small = e.target.nextElementSibling;
+        if (value.length === 10) {
+          if (small) small.style.color = '#10b981';
+        } else {
+          if (small) small.style.color = '#dbeafe';
+        }
+      });
+
+      // Email input validation
+      const emailInput = document.getElementById('email');
+      emailInput.addEventListener('blur', function(e) {
+        const email = e.target.value.trim();
+        if (email && !validateEmail(email)) {
+          e.target.setCustomValidity('Please enter a valid email address');
+          e.target.style.borderColor = '#ef4444';
+        } else {
+          e.target.setCustomValidity('');
+          e.target.style.borderColor = '#dbeafe';
+        }
+      });
+
+      emailInput.addEventListener('input', function(e) {
+        e.target.setCustomValidity('');
+        e.target.style.borderColor = '#dbeafe';
+      });
 
       // Handle form submission
       document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -651,20 +702,81 @@ Planning your industrial requirements? Our experienced team is here to deliver t
         const formMessage = document.getElementById('formMessage');
         const originalBtnText = submitBtn.textContent;
         
+        // Get form values
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        // Validate fields
+        if (!fullName) {
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#ef4444';
+          formMessage.style.color = '#ffffff';
+          formMessage.textContent = 'Please enter your full name.';
+          return;
+        }
+        
+        if (!validateEmail(email)) {
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#ef4444';
+          formMessage.style.color = '#ffffff';
+          formMessage.textContent = 'Please enter a valid email address.';
+          return;
+        }
+        
+        if (!validateMobile(mobile)) {
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#ef4444';
+          formMessage.style.color = '#ffffff';
+          formMessage.textContent = 'Please enter a valid 10-digit mobile number.';
+          return;
+        }
+        
+        if (!message) {
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#ef4444';
+          formMessage.style.color = '#ffffff';
+          formMessage.textContent = 'Please enter your message.';
+          return;
+        }
+        
         // Disable button and show loading state
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         formMessage.style.display = 'none';
         
-        // Get form values
+        // Get form values - using common EmailJS template variable names
+        const companyValue = document.getElementById('company').value.trim() || 'Not provided';
         const formData = {
-          from_name: document.getElementById('fullName').value,
-          from_email: document.getElementById('email').value,
-          mobile: document.getElementById('mobile').value,
-          company: document.getElementById('company').value || 'Not provided',
-          message: document.getElementById('message').value,
-          to_email: 'krnarendra2000@gmail.com'
+          // Multiple variable names for compatibility
+          from_name: fullName,
+          user_name: fullName,
+          name: fullName,
+          full_name: fullName,
+          
+          from_email: email,
+          user_email: email,
+          email: email,
+          email_address: email,
+          
+          mobile: mobile,
+          phone: mobile,
+          phone_number: mobile,
+          mobile_number: mobile,
+          
+          company: companyValue,
+          company_name: companyValue,
+          
+          message: message,
+          user_message: message,
+          message_text: message,
+          
+          reply_to: email
         };
+        
+        // Debug: Log form data being sent
+        console.log('Sending form data:', formData);
         
         // Send email using EmailJS
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
