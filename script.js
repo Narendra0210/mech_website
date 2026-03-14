@@ -439,3 +439,22 @@ if (heroSlider && heroSliderDotsContainer) {
         initHeroSlider();
     }
 }
+
+// Brands slider: reset to first image when user scrolls to the section
+const brandsSection = document.querySelector('.featured-brands');
+const brandsSlider = document.querySelector('.brands-slider');
+
+if (brandsSection && brandsSlider) {
+    const brandsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Reset animation - restart from the first brand
+                brandsSlider.style.animation = 'none';
+                brandsSlider.offsetHeight; // force reflow
+                brandsSlider.style.animation = '';
+            }
+        });
+    }, { threshold: 0.2 });
+
+    brandsObserver.observe(brandsSection);
+}
