@@ -1,0 +1,10 @@
+# Old marketing URLs → real files (fixes bookmarks & Google sitelinks)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^about-us/?$ /about.html [R=301,L]
+    RewriteRule ^our-products/?$ /product.html [R=301,L]
+    RewriteRule ^our-brands/?$ /product.html [R=301,L]
+    RewriteRule ^contact/?$ /contact.html [R=301,L]
+    RewriteRule ^contact-us/?$ /contact.html [R=301,L]
+</IfModule>

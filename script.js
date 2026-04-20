@@ -1,65 +1,94 @@
+/** WhatsApp: one place to update number and default chat message (used by float + header icon). */
+const WHATSAPP_PHONE_E164 = '917019381881';
+const WHATSAPP_DEFAULT_MESSAGE =
+    "Hello, I'd like to know more about Mechelectric Solution.";
+
+function getWhatsAppChatUrl() {
+    const text = encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE);
+    return `https://wa.me/${WHATSAPP_PHONE_E164}?text=${text}`;
+}
+
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // Move the active class immediately for visual feedback
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-
-        navMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
-});
 
-document.addEventListener('click', (e) => {
-    const isClickInsideNav = navMenu.contains(e.target) || menuToggle.contains(e.target);
-    if (!isClickInsideNav && navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
-    }
-});
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        const isClickInsideNav = navMenu.contains(e.target) || menuToggle.contains(e.target);
+        if (!isClickInsideNav && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+}
 
 // Ensure the correct link is active based on the current URL on page load
 window.addEventListener('DOMContentLoaded', () => {
+    const waUrl = getWhatsAppChatUrl();
+    document.querySelectorAll('a.whatsapp-float').forEach((el) => {
+        el.href = waUrl;
+    });
+
     const currentPath = window.location.pathname;
     const currentPage = currentPath.split('/').pop() || 'index.html';
-    
+
+    function hrefPathname(href) {
+        if (!href) return '';
+        try {
+            if (href.startsWith('http://') || href.startsWith('https://')) {
+                return new URL(href).pathname;
+            }
+        } catch (e) {
+            return href;
+        }
+        return href;
+    }
+
     navLinks.forEach(link => {
         link.classList.remove('active');
-        const linkPath = link.getAttribute('href');
-        
-        // Normalize current page
-        const isHomePage = currentPage === '' || currentPage === 'index.html' || currentPath.endsWith('/');
+        const rawHref = link.getAttribute('href');
+        const linkPath = hrefPathname(rawHref);
+
+        const isHomePage =
+            currentPath === '/' ||
+            currentPath === '' ||
+            currentPage === 'index.html';
         const isAboutPage = currentPage === 'about.html' || currentPath.includes('about.html');
         const isblogs = currentPage === 'blogs.html' || currentPath.includes('blogs.html');
         const isProductPage = currentPage === 'product.html' || currentPath.includes('product.html');
         const iscatelogue = currentPage === 'catelogue.html' || currentPath.includes('catelogue.html');
         const isServicePage = currentPage === 'service.html' || currentPath.includes('service.html');
         const isContactPage = currentPage === 'contact.html' || currentPath.includes('contact.html');
-        
-        // Check which page we're on and match with link
-        if (isHomePage && (linkPath === '/' || linkPath === 'index.html' || linkPath === '#home' || linkPath === '')) {
-            link.classList.add('active');
-        } else if (isAboutPage && linkPath === 'about.html') {
-            link.classList.add('active');
-        } else if (isProductPage && linkPath === 'product.html') {
-            link.classList.add('active');
-        } else if (isServicePage && linkPath === 'service.html') {
-            link.classList.add('active');
-        } else if (isContactPage && linkPath === 'contact.html') {
-            link.classList.add('active');
-        }else if (isblogs && linkPath === 'blogs.html'){
-            link.classList.add('active');
-        }else if(iscatelogue && linkPath === 'catelogue.html'){
-             link.classList.add('active');
 
+        if (isHomePage && linkPath === '/') {
+            link.classList.add('active');
+        } else if (isAboutPage && linkPath.includes('about.html')) {
+            link.classList.add('active');
+        } else if (isProductPage && linkPath.includes('product.html')) {
+            link.classList.add('active');
+        } else if (isServicePage && linkPath.includes('service.html')) {
+            link.classList.add('active');
+        } else if (isContactPage && linkPath.includes('contact.html')) {
+            link.classList.add('active');
+        } else if (isblogs && linkPath.includes('blogs.html')) {
+            link.classList.add('active');
+        } else if (iscatelogue && linkPath.includes('catelogue.html')) {
+            link.classList.add('active');
         }
     });
 });
